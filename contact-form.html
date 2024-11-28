@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Bonz.ai</title>
+    <title>Kontakt</title>
     <meta name="author" content="Oskar Blomberg" />
     <meta
       name="description"
@@ -18,16 +18,18 @@
     <script type="module" src="script.js"></script>
   </head>
 
-  <body>
+  <body class="body">
     <header class="header">
       <figure class="figure header__logo">
-        <img
-          class="img--mh"
-          src="images/logo/bonz.ai-logo-black-landscape-1162x280.png"
-          alt="bonz.ai logo"
-          width="1164"
-          height="280"
-        />
+        <a href="/">
+          <img
+            class="img--mh"
+            src="images/logo/bonz.ai-logo-black-landscape-1162x280.png"
+            alt="bonz.ai logo"
+            width="1164"
+            height="280"
+          />
+        </a>
       </figure>
       <div class="lr-container">
         <button class="header__button">
@@ -52,119 +54,94 @@
           <nav class="header__nav header__nav__menu">
             <ul class="header__nav__list">
               <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">TOP</a>
+                <a class="header__nav__list__item__link" href="/">Startsida</a>
               </li>
               <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">TOP</a>
+                <a class="header__nav__list__item__link" href="booking.html"
+                  >Boka rum</a
+                >
               </li>
               <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">TOP</a>
+                <a class="header__nav__list__item__link" href="about.html"
+                  >Om oss</a
+                >
               </li>
             </ul>
           </nav>
         </button>
       </div>
     </header>
-
-    <main class="main landing">
-      <figure class="landing__hero">
-        <img
-          class="landing__hero__img"
-          src="images/photos 2880 x  1620/09-day.jpg"
-          alt="Bergsvy med sjö i förgrunden"
-        />
-        <figcaption class="landing__hero__caption">
-          Hotellet där klimatsmart <span class="nowrap">möter tekniksmart</span>
-          <span class="nowrap">- så att du kan slappna av</span>
-        </figcaption>
-      </figure>
-
-      <section class="section landing__intro-text">
-        <h1>RUBRIK</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-          vero iure inventore eveniet saepe sint nobis eos, molestias quod
-          reiciendis unde, accusantium quia adipisci porro alias voluptas
-          nesciunt enim possimus.
-        </p>
-      </section>
-
-      <figure class="landing__picture-carousel">
-        <img
-          class="img--mw landing__picture-carousel__img"
-          src="images/photos 2880 x  1620/02-night.jpg"
-          alt="cozy room with open fire"
-        />
-      </figure>
-
-      <section class="section landing__surroundings">
-        <h2>Kom nära naturen</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-          minima laudantium natus!
-        </p>
-        <figure class="landing__picture-carousel">
-          <img
-            class="img--mw"
-            src="images/photos 2880 x  1620/03-day.jpg"
-            alt="utsikt från rummet"
-          />
-        </figure>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <form class="footer__form" action="">
-        <h2>Kontakt:</h2>
-        <label class="footer__form__label" for="name">*Namn:</label>
+    <main>
+      <form class="contact__form" action="">
+        <h1>Kontakt:</h1>
+        <label class="contact__form__label" for="name">*Namn:</label>
         <input
-          class="footer__form__input"
+          class="contact__form__input"
           type="text"
           name="name"
           id="name"
+          autocomplete="name"
           required
           aria-required="true"
           placeholder="Your Name"
         />
 
-        <label class="footer__form__label" for="email">*E-post:</label>
+        <label class="contact__form__label" for="email">*E-post:</label>
         <input
-          class="footer__form__input"
+          class="contact__form__input"
           type="email"
           name="email"
           id="email"
+          autocomplete="email"
           required
           aria-required="true"
           placeholder="your@email.com"
         />
 
-        <label class="footer__form__label" for="message">*Meddelande:</label>
+        <label class="contact__form__label" for="tel">Telefon:</label>
+        <input
+          class="contact__form__input"
+          type="tel"
+          name="tel"
+          id="tel"
+          autocomplete="tel"
+          placeholder="0701234567"
+        />
+
+        <label class="contact__form__label" for="message">*Meddelande:</label>
         <textarea
-          class="footer__form__input"
+          class="contact__form__input"
           name="message"
           id="message"
           cols="40"
-          rows="5"
+          rows="6"
           required
           aria-required="true"
           placeholder="message"
         ></textarea>
+        <button type="submit" class="button submit__button">Skicka</button>
+        <button type="reset" class="button reset__button">Rensa</button>
       </form>
+    </main>
 
+    <footer class="footer">
       <section class="section footer__contact">
+        <h2>Kontakta oss</h2>
         <h3>Adress</h3>
         <address>
           Gata 23
           <br />
           123 23 Stad
         </address>
-        <a href="tel:1231231234"></a>
+        <a class="footer__link" href="tel:1231231234">123-1231234</a>
+        <a class="footer__link" href="/contact-form.html">Kontaktformulär</a>
       </section>
       <section class="section footer__opening-hours">
         <h3>Öppettider:</h3>
         <time datetime="07:00">07:00</time> -
         <time datetime="19:00">12:00</time>
       </section>
+      <a href="#">Till toppen</a>
     </footer>
   </body>
 </html>
