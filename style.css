@@ -10,6 +10,11 @@
   white-space: nowrap;
 }
 
+.off-screen {
+  position: absolute;
+  left: -10000px;
+}
+
 .lr-container {
   display: flex;
   align-items: center;
@@ -33,6 +38,8 @@ img {
 }
 
 .body {
+  font-size: 1.2rem;
+  line-height: 1.4;
   min-height: 100vh;
   width: 100%;
   display: grid;
@@ -40,8 +47,23 @@ img {
   grid-template-rows: 60px 1fr auto;
 }
 
-.section {
-  margin: 1rem 2rem;
+a:hover {
+  cursor: pointer;
+}
+
+/* TEXT */
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.8rem;
+}
+
+h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
 }
 
 /* VARIABLES */
@@ -140,6 +162,12 @@ img {
   font-weight: bold;
 }
 
+/* MAIN */
+
+.main__section {
+  margin: 1rem 2rem;
+}
+
 /* LANDING */
 
 .landing__hero {
@@ -190,12 +218,91 @@ img {
   grid-column: span 2;
 }
 
+/* ROOMS */
+
+.room__calendar {
+  max-width: 90%;
+  background-color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: table;
+  table-layout: fixed;
+  overflow: hidden;
+}
+
+.room__calendar__heading {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+}
+
+.room__calendar__week {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+}
+
+.room__calendar__week__day {
+  background-color: var(--LIGHT-GREEN);
+  display: grid;
+  place-content: center;
+}
+
+.room__calendar__dates {
+  background-color: black;
+  display: grid;
+  grid-auto-flow: row;
+  gap: 1px;
+}
+
+.room__calendar__dates__rows {
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+}
+
+.room__calendar__dates__rows__date {
+  padding: 0.2rem;
+  background-color: white;
+  display: grid;
+  place-content: center;
+}
+
 /* FOOTER */
 
 .footer {
+  height: 15rem;
+  padding: 1rem 2rem;
   color: white;
   background-color: #005306;
   width: 100%;
+
+  display: grid;
+  gap: 1rem;
+  grid-template-areas:
+    "cont time"
+    "cont link";
+}
+
+.footer__contact {
+  grid-area: cont;
+}
+
+.footer__opening-hours {
+  grid-area: time;
+  text-align: right;
+}
+
+.footer__link {
+  color: white;
+  display: block;
+}
+
+.footer__link--to-top {
+  grid-area: link;
+  text-align: right;
 }
 
 /* ANIMATION */

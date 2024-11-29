@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Om oss</title>
+    <title>Sök och boka</title>
     <meta name="author" content="Oskar Blomberg" />
     <meta
       name="description"
@@ -74,26 +74,269 @@
       </div>
     </header>
 
-    <main></main>
+    <main class="main">
+      <section class="main__section booking">
+        <h1>Sök och boka rum</h1>
+        <form action="">
+          <label for="check-in">Check-in</label>
+          <input
+            type="date"
+            id="check-in"
+            name="check-in"
+            required
+            aria-required="true"
+          />
+
+          <label for="check-out">Check-out</label>
+          <input
+            type="date"
+            id="check-out"
+            name="check-out"
+            required
+            aria-required="true"
+          />
+
+          <label for="beds">Antal besökare*:</label>
+          <input
+            type="number"
+            min="1"
+            max="4"
+            step="1"
+            id="beds"
+            name="beds"
+            required
+            aria-required="true"
+          />
+
+          <label for="show-all">Visa även bokade:</label>
+          <input type="checkbox" id="show-all" name="show-all" checked />
+          <button type="submit" class="button booking__button">Sök</button>
+        </form>
+      </section>
+
+      <section class="main__section rooms">
+        <h2>Våra rum</h2>
+
+        <article class="room">
+          <figure class="room__figure">
+            <img
+              class="img--mw"
+              src="images/photos 2880 x  1620/03-day.jpg"
+              width="2880"
+              height="1620"
+              alt="Bild av rummet"
+            />
+          </figure>
+
+          <h3>Room title</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+            aut consequuntur id nam veniam? Odit, minus? Deserunt quo voluptatem
+            alias.
+          </p>
+
+          <button class="button room__booking-button">Boka från 1234:-</button>
+
+          <ul class="room__amenities">
+            <li class="room__amenities__amenity">USP</li>
+            <li class="room__amenities__amenity">USP</li>
+            <li class="room__amenities__amenity">USP</li>
+            <li class="room__amenities__amenity">USP</li>
+          </ul>
+          <details>
+            <summary>Visa fler</summary>
+            <ul>
+              <h3>För din komfort:</h3>
+              <li class="room__amenities__amenity">USP</li>
+              <li class="room__amenities__amenity">USP</li>
+              <h3>För din trygghet:</h3>
+              <li class="room__amenities__amenity">USP</li>
+              <li class="room__amenities__amenity">USP</li>
+            </ul>
+          </details>
+
+          <table class="room__calendar">
+            <caption class="off-screen">
+              Lediga datum
+            </caption>
+            <thead>
+              <tr>
+                <th class="room__calendar__heading" colspan="7">December</th>
+              </tr>
+              <tr class="room__calendar__week">
+                <th class="room__calendar__week__day" scope="col">Mån</th>
+                <th class="room__calendar__week__day" scope="col">Tis</th>
+                <th class="room__calendar__week__day" scope="col">Ons</th>
+                <th class="room__calendar__week__day" scope="col">Tor</th>
+                <th class="room__calendar__week__day" scope="col">Fre</th>
+                <th class="room__calendar__week__day" scope="col">Lör</th>
+                <th class="room__calendar__week__day" scope="col">Sön</th>
+              </tr>
+            </thead>
+            <tbody class="room__calendar__dates">
+              <tr class="room__calendar__dates__rows">
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-11-24">24</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-11-25">25</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-11-26">26</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-11-27">27</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-11-28">28</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-11-29">29</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-11-30">30</time>
+                </td>
+              </tr>
+              <tr class="room__calendar__dates__rows">
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-01">1</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-02">2</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-03">3</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-04">4</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-05">5</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-06">6</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-07">7</time>
+                </td>
+              </tr>
+              <tr class="room__calendar__dates__rows">
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-08">8</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-09">9</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-10">10</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-11">11</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-12">12</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-13">13</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-14">14</time>
+                </td>
+              </tr>
+              <tr class="room__calendar__dates__rows">
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-15">15</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-16">16</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-17">17</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-18">18</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-19">19</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-20">20</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-21">21</time>
+                </td>
+              </tr>
+              <tr class="room__calendar__dates__rows">
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-22">22</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-23">23</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-24">24</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-25">25</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-26">26</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-27">27</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-28">28</time>
+                </td>
+              </tr>
+              <tr class="room__calendar__dates__rows">
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-29">29</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-30">30</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-31">31</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-01">1</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-02">2</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-03">3</time>
+                </td>
+                <td class="room__calendar__dates__rows__date">
+                  <time datetime="2024-12-04">4</time>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </article>
+      </section>
+    </main>
 
     <footer class="footer">
-      <section class="section footer__contact">
-        <h2>Kontakta oss</h2>
+      <section class="footer__contact">
         <h3>Adress</h3>
         <address>
           Gata 23
           <br />
           123 23 Stad
         </address>
-        <a class="footer__link" href="tel:1231231234">123-1231234</a>
+        <a class="footer__link" href="tel:1231231234">Tel: 123-1231234</a>
         <a class="footer__link" href="/contact-form.html">Kontaktformulär</a>
       </section>
-      <section class="section footer__opening-hours">
+      <section class="footer__opening-hours">
         <h3>Öppettider:</h3>
         <time datetime="07:00">07:00</time> -
-        <time datetime="19:00">12:00</time>
+        <time datetime="19:00">19:00</time>
+        <p>När du har checkat in kan du komma och gå dygnet runt.</p>
       </section>
-      <a href="#">Till toppen</a>
+
+      <a class="footer__link footer__link--to-top" href="#">Till toppen</a>
     </footer>
   </body>
 </html>
