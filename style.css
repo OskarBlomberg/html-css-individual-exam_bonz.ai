@@ -42,6 +42,7 @@ img {
 }
 
 .body {
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 1.2rem;
   line-height: 1.4;
   min-height: 100vh;
@@ -72,14 +73,9 @@ h3 {
 
 /* BUTTON, INPUT, TEXTAREA, SELECT */
 
-button,
-input,
-textarea,
-select {
-  font: inherit;
-}
-
 input {
+  font: inherit;
+  font-size: 1rem;
   border-radius: 5px;
   padding: 0.1rem 0.5rem;
 }
@@ -87,6 +83,7 @@ input {
 .button {
   background: radial-gradient(var(--LIGTH-BLUE), var(--DARK-BLUE));
   color: white;
+  font: inherit;
   text-shadow: 1px 1px var(--DARK-BLUE);
   font-weight: bold;
   height: 48px;
@@ -109,7 +106,7 @@ input {
 /* HEADER */
 
 .header {
-  padding: 8px 0.5rem;
+  padding: 8px 1rem;
   position: sticky;
   top: 0;
   z-index: 1;
@@ -148,7 +145,7 @@ input {
 }
 
 .header__nav__lang {
-  right: 48px;
+  right: 64px;
 }
 
 .header__nav__menu {
