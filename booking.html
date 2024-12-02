@@ -50,7 +50,12 @@
         </div>
 
         <div class="header__button" tabindex="0">
-          MENY
+          <img
+            src="images/Hamburger_icon.svg"
+            alt="menu"
+            width="32"
+            height="32"
+          />
           <nav class="header__nav header__nav__menu">
             <ul class="header__nav__list">
               <li class="header__nav__list__item">
@@ -75,41 +80,62 @@
     </header>
 
     <main class="main">
-      <section class="main__section booking">
+      <section class="main__section">
         <h1>Sök och boka rum</h1>
-        <form action="">
-          <label for="check-in">Check-in</label>
-          <input
-            type="date"
-            id="check-in"
-            name="check-in"
-            required
-            aria-required="true"
-          />
+        <form class="booking" action="">
+          <div class="booking__container booking__container--in">
+            <label for="check-in">Check-in:</label>
+            <input
+              type="date"
+              id="check-in"
+              name="check-in"
+              required
+              aria-required="true"
+              value="2024-12-13"
+            />
+          </div>
 
-          <label for="check-out">Check-out</label>
-          <input
-            type="date"
-            id="check-out"
-            name="check-out"
-            required
-            aria-required="true"
-          />
+          <div class="booking__container booking__container--out">
+            <label for="check-out">Check-out:</label>
+            <input
+              type="date"
+              id="check-out"
+              name="check-out"
+              required
+              aria-required="true"
+              value="2024-12-15"
+            />
+          </div>
 
-          <label for="beds">Antal besökare*:</label>
-          <input
-            type="number"
-            min="1"
-            max="4"
-            step="1"
-            id="beds"
-            name="beds"
-            required
-            aria-required="true"
-          />
+          <div class="booking__container booking__container--beds">
+            <label for="beds">Antal besökare*: </label>
+            <input
+              class="margin-left"
+              type="number"
+              min="1"
+              max="4"
+              step="1"
+              id="beds"
+              name="beds"
+              required
+              aria-required="true"
+              value="2"
+            />
+            <p>
+              * Inklusive barn. Spädbarn utan behov av separat säng behöver inte
+              räknas in i detta steg.
+            </p>
+          </div>
 
-          <label for="show-all">Visa även bokade:</label>
-          <input type="checkbox" id="show-all" name="show-all" checked />
+          <div class="booking__container booking__container--include-booked">
+            <label for="show-all">Visa även bokade:</label>
+            <input
+              class="margin-left"
+              type="checkbox"
+              id="show-all"
+              name="show-all"
+            />
+          </div>
           <button type="submit" class="button booking__button">Sök</button>
         </form>
       </section>
