@@ -32,7 +32,7 @@
         </a>
       </figure>
       <div class="lr-container">
-        <button class="header__button">
+        <div class="header__button" tabindex="0">
           LANG
           <nav class="header__nav header__nav__lang">
             <ul class="header__nav__list">
@@ -47,9 +47,9 @@
               </li>
             </ul>
           </nav>
-        </button>
+        </div>
 
-        <button class="header__button">
+        <div class="header__button" tabindex="0">
           MENY
           <nav class="header__nav header__nav__menu">
             <ul class="header__nav__list">
@@ -70,7 +70,7 @@
               </li>
             </ul>
           </nav>
-        </button>
+        </div>
       </div>
     </header>
 
@@ -121,19 +121,21 @@
           <figure class="room__figure">
             <img
               class="img--mw"
-              src="images/photos 2880 x  1620/03-day.jpg"
+              src="images/photos-2880x1620/03-day.jpg"
               width="2880"
               height="1620"
               alt="Bild av rummet"
             />
           </figure>
 
-          <h3>Room title</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
-            aut consequuntur id nam veniam? Odit, minus? Deserunt quo voluptatem
-            alias.
-          </p>
+          <div class="room__text">
+            <h3>Room title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              aut consequuntur id nam veniam? Odit, minus? Deserunt quo
+              voluptatem alias.
+            </p>
+          </div>
 
           <button class="button room__booking-button">Boka från 1234:-</button>
 
@@ -143,20 +145,48 @@
             <li class="room__amenities__amenity">USP</li>
             <li class="room__amenities__amenity">USP</li>
           </ul>
-          <details>
+          <details class="room__amenities--more">
             <summary>Visa fler</summary>
             <ul>
-              <h3>För din komfort:</h3>
+              <li class="room__amenities__header">För din komfort:</li>
               <li class="room__amenities__amenity">USP</li>
               <li class="room__amenities__amenity">USP</li>
-              <h3>För din trygghet:</h3>
+              <li class="room__amenities__header">För din trygghet:</li>
               <li class="room__amenities__amenity">USP</li>
               <li class="room__amenities__amenity">USP</li>
             </ul>
           </details>
+        </article>
+      </section>
+    </main>
 
-          <table class="room__calendar">
-            <caption class="off-screen">
+    <footer class="footer">
+      <section class="footer__contact">
+        <h3>Adress</h3>
+        <address>
+          Gata 23
+          <br />
+          123 23 Stad
+        </address>
+        <a class="footer__link" href="tel:1231231234">Tel: 123-1231234</a>
+        <a class="footer__link" href="/contact-form.html">Kontaktformulär</a>
+      </section>
+      <section class="footer__opening-hours">
+        <h3>Öppettider:</h3>
+        <time datetime="07:00">07:00</time> -
+        <time datetime="19:00">19:00</time>
+        <p>När du har checkat in kan du komma och gå dygnet runt.</p>
+      </section>
+
+      <a class="footer__link footer__link--to-top" href="#">Till toppen</a>
+    </footer>
+  </body>
+</html>
+
+<!-- TODO: I mån av tid, skriv ett program som genererar ett sånt här smidigt för varje rum. Kanske får stoppas in som insertAdjecentHtml(beforeEnd) för varje rumsartikel -->
+
+<!--  <table class="room__calendar">
+            <caption class="offscreen">
               Lediga datum
             </caption>
             <thead>
@@ -313,30 +343,4 @@
                 </td>
               </tr>
             </tbody>
-          </table>
-        </article>
-      </section>
-    </main>
-
-    <footer class="footer">
-      <section class="footer__contact">
-        <h3>Adress</h3>
-        <address>
-          Gata 23
-          <br />
-          123 23 Stad
-        </address>
-        <a class="footer__link" href="tel:1231231234">Tel: 123-1231234</a>
-        <a class="footer__link" href="/contact-form.html">Kontaktformulär</a>
-      </section>
-      <section class="footer__opening-hours">
-        <h3>Öppettider:</h3>
-        <time datetime="07:00">07:00</time> -
-        <time datetime="19:00">19:00</time>
-        <p>När du har checkat in kan du komma och gå dygnet runt.</p>
-      </section>
-
-      <a class="footer__link footer__link--to-top" href="#">Till toppen</a>
-    </footer>
-  </body>
-</html>
+          </table> -->

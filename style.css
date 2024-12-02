@@ -10,7 +10,7 @@
   white-space: nowrap;
 }
 
-.off-screen {
+.offscreen {
   position: absolute;
   left: -10000px;
 }
@@ -64,6 +64,21 @@ h2 {
 h3 {
   font-size: 1.3rem;
   margin-bottom: 0.5rem;
+}
+
+/* BUTTONS */
+
+.button {
+  background: radial-gradient(var(--LIGTH-BLUE), var(--DARK-BLUE));
+  color: white;
+  text-shadow: 1px 1px var(--DARK-BLUE);
+  font: inherit;
+  font-weight: bold;
+  height: 48px;
+  min-width: 5rem;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 5px;
 }
 
 /* VARIABLES */
@@ -165,7 +180,7 @@ h3 {
 /* MAIN */
 
 .main__section {
-  margin: 1rem 2rem;
+  margin: 1rem 1rem;
 }
 
 /* LANDING */
@@ -220,7 +235,58 @@ h3 {
 
 /* ROOMS */
 
-.room__calendar {
+.rooms {
+  margin: 1rem 1rem;
+}
+
+.room {
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: -1px 1px 4px grey;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: repeat(auto);
+  grid-template-areas:
+    "pic pic"
+    "inf inf"
+    "btn ."
+    "usp usp"
+    "esp esp";
+  gap: 0.4rem;
+}
+
+.room__figure {
+  grid-area: pic;
+}
+
+.room__text {
+  grid-area: inf;
+}
+
+.room__amenities {
+  grid-area: usp;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: auto;
+  list-style-position: inside;
+}
+
+.room__amenities--more {
+  grid-area: esp;
+  list-style-position: inside;
+}
+
+.room__booking-button {
+  grid-area: btn;
+}
+
+.room__amenities__header {
+  list-style-type: none;
+  font-weight: bold;
+}
+
+/* Css för kalendrar som kan stoppas in slutet av rumsartiklarna för att visa lediga datum */
+/* .room__calendar {
   max-width: 90%;
   background-color: black;
   border: 1px solid black;
@@ -268,19 +334,19 @@ h3 {
   background-color: white;
   display: grid;
   place-content: center;
-}
+} */
 
 /* FOOTER */
 
 .footer {
-  height: 15rem;
-  padding: 1rem 2rem;
+  min-height: 11rem;
+  padding: 1rem 2rem 2rem;
   color: white;
   background-color: #005306;
   width: 100%;
 
   display: grid;
-  gap: 1rem;
+  gap: 3rem;
   grid-template-areas:
     "cont time"
     "cont link";
@@ -293,6 +359,7 @@ h3 {
 .footer__opening-hours {
   grid-area: time;
   text-align: right;
+  text-wrap: balance;
 }
 
 .footer__link {

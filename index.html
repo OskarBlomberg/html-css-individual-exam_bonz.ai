@@ -32,7 +32,8 @@
         </a>
       </figure>
       <div class="lr-container">
-        <button class="header__button">
+        <!-- Button-element får inte innehålla nav, därav div -->
+        <div class="header__button" tabindex="0">
           LANG
           <nav class="header__nav header__nav__lang">
             <ul class="header__nav__list">
@@ -47,9 +48,9 @@
               </li>
             </ul>
           </nav>
-        </button>
+        </div>
 
-        <button class="header__button">
+        <div class="header__button" tabindex="0">
           MENY
           <nav class="header__nav header__nav__menu">
             <ul class="header__nav__list">
@@ -72,7 +73,7 @@
               </li>
             </ul>
           </nav>
-        </button>
+        </div>
       </div>
     </header>
 
@@ -80,7 +81,7 @@
       <figure class="landing__hero">
         <img
           class="landing__hero__img"
-          src="images/photos 2880 x  1620/09-day.jpg"
+          src="images/photos-2880x1620/09-day.jpg"
           alt="Bergsvy med sjö i förgrunden"
         />
         <figcaption class="landing__hero__caption">
@@ -102,7 +103,7 @@
       <figure class="landing__picture-carousel">
         <img
           class="img--mw landing__picture-carousel__img"
-          src="images/photos 2880 x  1620/02-night.jpg"
+          src="images/photos-2880x1620/02-night.jpg"
           alt="cozy room with open fire"
         />
       </figure>
@@ -117,7 +118,7 @@
       <figure class="landing__picture-carousel">
         <img
           class="img--mw"
-          src="images/photos 2880 x  1620/03-day.jpg"
+          src="images/photos-2880x1620/03-day.jpg"
           alt="utsikt från rummet"
           loading="lazy"
         />
