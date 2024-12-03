@@ -32,6 +32,10 @@
 
 /* GENERAL */
 
+html {
+  scroll-behavior: smooth;
+}
+
 img {
   display: block;
 }
@@ -205,25 +209,25 @@ input {
 /* MAIN */
 
 .main__section {
-  /* Procent på bredden för att inte få overflow om användaren ställer in större textstorlek i webbläsarens inställningar */
+  /* Procent på bredden för att inte få overflow om användaren ställer in större textstorlek i webbläsarens inställningar. Funkar tyvärr inte med "very large" */
   margin: 1.5rem 5% 1rem;
 }
 
 /* LANDING */
 
-.landing__hero {
+.hero {
   max-width: 100%;
   height: 70vh;
 }
 
-.landing__hero__img {
+.hero__img {
   height: 100%;
   width: 100%;
   object-fit: cover;
   object-position: 55% 80%;
 }
 
-.landing__hero__caption {
+.hero__caption--on-picture {
   position: absolute;
   top: 12%;
   left: 5%;
@@ -453,5 +457,13 @@ input {
 
   100% {
     transform: scale(100%);
+  }
+}
+
+/* MEDIA QUERIES */
+
+@media (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto;
   }
 }
