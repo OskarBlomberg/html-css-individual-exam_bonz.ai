@@ -33,18 +33,18 @@
         </a>
       </figure>
       <div class="lr-container">
-        <div class="header__button" tabindex="0">
-          LANG
+        <div class="header__button header__button--lang" tabindex="0">
+          Språk
           <nav class="header__nav header__nav__lang">
             <ul class="header__nav__list">
               <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">SWE</a>
+                <a class="header__nav__list__item__link" href="#">Svenska</a>
               </li>
               <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">ENG</a>
+                <a class="header__nav__list__item__link" href="#">English</a>
               </li>
               <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">GER</a>
+                <a class="header__nav__list__item__link" href="#">Deutsch</a>
               </li>
             </ul>
           </nav>
@@ -82,11 +82,12 @@
 
     <main class="main">
       <section class="main__section">
-        <h1>Sök och boka rum</h1>
-        <form class="booking" action="">
+        <h1>Sök och <span class="nowrap">boka rum</span></h1>
+        <form class="booking">
           <div class="booking__container booking__container--in">
             <label for="check-in">Check-in:</label>
             <input
+              class="booking__container__input"
               type="date"
               id="check-in"
               name="check-in"
@@ -99,6 +100,7 @@
           <div class="booking__container booking__container--out">
             <label for="check-out">Check-out:</label>
             <input
+              class="booking__container__input"
               type="date"
               id="check-out"
               name="check-out"
@@ -111,7 +113,7 @@
           <div class="booking__container booking__container--beds">
             <label for="beds">Antal besökare*: </label>
             <input
-              class="margin-left"
+              class="booking__container__input--beds"
               type="number"
               min="1"
               max="4"
@@ -120,10 +122,14 @@
               name="beds"
               required
               aria-required="true"
+              aria-describedby="booking__container--beds__clarification"
               value="2"
             />
-            <p>
-              * Inklusive barn. Spädbarn utan behov av separat säng behöver inte
+            <p
+              class="booking__container--beds__clarification"
+              id="booking__container--beds__clarification"
+            >
+              *Inklusive barn. Spädbarn utan behov av separat säng behöver inte
               räknas in i detta steg.
             </p>
           </div>
@@ -131,7 +137,7 @@
           <div class="booking__container booking__container--include-booked">
             <label for="show-all">Visa även bokade:</label>
             <input
-              class="margin-left"
+              class="checkbox"
               type="checkbox"
               id="show-all"
               name="show-all"
@@ -142,7 +148,7 @@
       </section>
 
       <section class="main__section rooms">
-        <h2>Våra rum</h2>
+        <h2 class="rooms__heading">Våra rum</h2>
 
         <article class="room">
           <figure class="room__figure">

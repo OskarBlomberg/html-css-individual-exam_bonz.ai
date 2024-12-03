@@ -11,12 +11,17 @@
 }
 
 .offscreen {
+  /* Rekommenderad metod för sånt som bara ska läsas av skärmläsare enligt https://www.accessibility-developer-guide.com/ med flera */
   position: absolute;
   left: -10000px;
 }
 
-.margin-left {
-  margin-left: 0.5rem;
+.checkbox {
+  /* Höjd och bredd inte 48px då även texten är klickbar tack vare label */
+  display: block;
+  height: 32px;
+  width: 32px;
+  margin-bottom: 0.5em;
 }
 
 .lr-container {
@@ -43,7 +48,7 @@ img {
 
 .body {
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.4;
   min-height: 100vh;
   width: 100%;
@@ -60,15 +65,17 @@ a:hover {
 
 h1 {
   font-size: 2rem;
+  margin-bottom: 0.3rem;
 }
 
 h2 {
   font-size: 1.8rem;
+  margin-bottom: 0.3rem;
 }
 
 h3 {
   font-size: 1.3rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.3rem;
 }
 
 /* BUTTON, INPUT, TEXTAREA, SELECT */
@@ -88,7 +95,7 @@ input {
   font-weight: bold;
   height: 48px;
   max-width: 12rem;
-  padding: 0.8rem;
+  padding: 0 0.8rem;
   border: none;
   border-radius: 5px;
 }
@@ -96,7 +103,7 @@ input {
 /* VARIABLES */
 
 :root {
-  --DARK-GREEN: #005306;
+  --DARK-GREEN: #002403;
   --DARK-BLUE: #14264d;
   --LIGHT-GREEN: #bcd39c;
   --LIGTH-BLUE: #0c8ce9;
@@ -130,6 +137,10 @@ input {
   place-items: center;
 }
 
+.header__button--lang {
+  font-size: 1rem;
+}
+
 .header__nav {
   width: 15rem;
   background-color: white;
@@ -137,7 +148,7 @@ input {
   position: absolute;
   top: 54px;
   transform-origin: top right;
-  animation: showMenu 0.4s ease-in-out forwards;
+  animation: showMenu 0.35s ease-out forwards;
 }
 
 :is(.header__button:hover, .header__button:focus-within) .header__nav {
@@ -145,7 +156,7 @@ input {
 }
 
 .header__nav__lang {
-  right: 64px;
+  right: 56px;
 }
 
 .header__nav__menu {
@@ -194,7 +205,8 @@ input {
 /* MAIN */
 
 .main__section {
-  margin: 1rem 1rem;
+  /* Procent på bredden för att inte få overflow om användaren ställer in större textstorlek i webbläsarens inställningar */
+  margin: 1.5rem 5% 1rem;
 }
 
 /* LANDING */
@@ -214,7 +226,7 @@ input {
 .landing__hero__caption {
   position: absolute;
   top: 12%;
-  left: 2rem;
+  left: 5%;
   margin-right: 10%;
   font-size: clamp(1.5rem, 2.4vw, 2rem);
   line-height: 1.6;
@@ -256,18 +268,43 @@ input {
   gap: 1rem;
 }
 
-.booking__container--beds {
+.booking__container {
   grid-column: span 2;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.booking__container--beds {
+  display: unset;
+}
+
+.booking__container__input {
+  max-width: 335px;
+}
+
+.booking__container__input--beds {
+  margin-left: 0.5rem;
+}
+
+.booking__container--beds__clarification {
+  margin-top: 1rem;
 }
 
 .booking__container--include-booked {
   grid-column: span 2;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
 }
 
 /* ROOMS */
 
 .rooms {
   margin: 1rem 1rem;
+}
+
+.rooms__heading {
+  margin: 0.5rem;
 }
 
 .room {
@@ -280,10 +317,10 @@ input {
   grid-template-areas:
     "pic pic"
     "inf inf"
-    "btn ."
+    "btn btn"
     "usp usp"
     "esp esp";
-  gap: 0.4rem;
+  gap: 1rem 0.4rem;
 }
 
 .room__figure {
@@ -371,13 +408,13 @@ input {
 
 .footer {
   min-height: 9rem;
-  padding: 1rem 2rem 2rem;
+  padding: 1rem 5% 2rem;
   color: white;
-  background-color: #005306;
+  background-color: var(--DARK-GREEN);
   width: 100%;
 
   display: grid;
-  gap: 1.5rem 3rem;
+  gap: 1rem 3rem;
   grid-template-areas:
     "cont time"
     "cont link";

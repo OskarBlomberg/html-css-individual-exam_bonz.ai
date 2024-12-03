@@ -32,18 +32,18 @@
         </a>
       </figure>
       <div class="lr-container">
-        <div class="header__button" tabindex="0">
-          LANG
+        <div class="header__button header__button--lang" tabindex="0">
+          Språk
           <nav class="header__nav header__nav__lang">
             <ul class="header__nav__list">
               <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">SWE</a>
+                <a class="header__nav__list__item__link" href="#">Svenska</a>
               </li>
               <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">ENG</a>
+                <a class="header__nav__list__item__link" href="#">English</a>
               </li>
               <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">GER</a>
+                <a class="header__nav__list__item__link" href="#">Deutsch</a>
               </li>
             </ul>
           </nav>
@@ -77,7 +77,7 @@
       </div>
     </header>
     <main>
-      <form class="contact__form" action="">
+      <form class="contact__form" action="https://httpbin.org/get" method="get">
         <h1>Kontakt:</h1>
         <label class="contact__form__label" for="name">*Namn:</label>
         <input
@@ -85,7 +85,8 @@
           type="text"
           name="name"
           id="name"
-          autocomplete="name"
+          autocomplete="on"
+          autofocus
           required
           aria-required="true"
           placeholder="Your Name"
