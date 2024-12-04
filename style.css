@@ -113,6 +113,8 @@ input {
   --LIGHT-GREEN: #bcd39c;
   --LIGTH-BLUE: #0c8ce9;
   --LOGO-TURQUOISE: #55eabe;
+  --WARM-WHITE: #fffff8;
+  --WARM-WHITE-TRANS: #fffff8b7;
 }
 
 /* HEADER */
@@ -211,12 +213,24 @@ input {
 
 .main__section {
   width: 100%;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--LIGHT-GREEN);
 }
 
 .main__section__header,
 .main__section__text {
   /* Procent på bredden för att inte få overflow om användaren ställer in större textstorlek i webbläsarens inställningar. Funkar tyvärr inte med "very large" */
   margin: 1.5rem 5% 1rem;
+}
+
+.main__section--pic-left {
+  background: fixed repeat-y url(images/speckeled-pattern_576x819.png);
+}
+
+.main__section--pic-left :is(.main__section__header, .main__section__text) {
+  background-color: var(--WARM-WHITE-TRANS);
+  padding: 0 0.2rem 0.2rem;
 }
 
 /* LANDING */
@@ -242,11 +256,8 @@ input {
   line-height: 1.6;
 }
 
-.landing__picture-carousel {
+.main__picture-container {
   width: 100%;
-}
-
-@media screen and (min-width: 577px) {
 }
 
 /* CONTACT */
@@ -439,7 +450,6 @@ input {
 
 .footer {
   min-height: 9rem;
-  margin-top: 1rem;
   padding: 1rem 5% 2rem;
   color: white;
   background-color: var(--DARK-GREEN);
@@ -497,6 +507,46 @@ input {
 }
 
 @media screen and (min-width: 577px) {
+  /* LANDING AND ABOUT */
+
+  .main__picture-container {
+    grid-area: pic;
+  }
+
+  .main__section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .main__section__header {
+    grid-area: hea;
+    margin: 0 5%;
+  }
+
+  .main__section__text {
+    grid-area: tex;
+    margin-top: 0;
+  }
+
+  .main__section--pic-left {
+    background: fixed repeat-y url(images/speckeled-pattern_1920x1080.png);
+    display: grid;
+
+    grid-template-areas:
+      "pic pic hea"
+      "pic pic tex"
+      "pic pic .";
+  }
+
+  .main__section--pic-right {
+    display: grid;
+
+    grid-template-areas:
+      "hea pic pic"
+      "tex pic pic"
+      ". pic pic";
+  }
+
   /* CONTACT */
   .contact__form {
     width: 90%;
