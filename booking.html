@@ -80,14 +80,14 @@
       </div>
     </header>
 
-    <main class="main">
-      <section class="main__section">
+    <main class="main booking">
+      <section class="booking__section">
         <h1>Sök och <span class="nowrap">boka rum</span></h1>
-        <form class="booking">
-          <div class="booking__container booking__container--in">
+        <form class="booking-form">
+          <div class="booking-form__container booking-form__container--in">
             <label for="check-in">Check-in:</label>
             <input
-              class="booking__container__input"
+              class="booking-form__container__input"
               type="date"
               id="check-in"
               name="check-in"
@@ -97,10 +97,10 @@
             />
           </div>
 
-          <div class="booking__container booking__container--out">
+          <div class="booking-form__container booking-form__container--out">
             <label for="check-out">Check-out:</label>
             <input
-              class="booking__container__input"
+              class="booking-form__container__input"
               type="date"
               id="check-out"
               name="check-out"
@@ -110,10 +110,10 @@
             />
           </div>
 
-          <div class="booking__container booking__container--beds">
+          <div class="booking__container booking.form__container--beds">
             <label for="beds">Antal besökare*: </label>
             <input
-              class="booking__container__input--beds"
+              class="booking-form__container__input--beds"
               type="number"
               min="1"
               max="4"
@@ -126,15 +126,17 @@
               value="2"
             />
             <p
-              class="booking__container--beds__clarification"
-              id="booking__container--beds__clarification"
+              class="booking-form__container--beds__clarification"
+              id="booking-form__container--beds__clarification"
             >
               *Inklusive barn. Spädbarn utan behov av separat säng behöver inte
               räknas in i detta steg.
             </p>
           </div>
 
-          <div class="booking__container booking__container--include-booked">
+          <div
+            class="booking-form__container booking__container--include-booked"
+          >
             <label for="show-all">Visa även bokade:</label>
             <input
               class="checkbox"
@@ -147,7 +149,7 @@
         </form>
       </section>
 
-      <section class="main__section rooms">
+      <section class="booking__section rooms">
         <h2 class="rooms__heading">Våra rum</h2>
 
         <article class="room">
