@@ -260,6 +260,13 @@ input {
   width: 100%;
 }
 
+/* ABOUT */
+
+.caption-header-about {
+  padding: 0.2rem 0.5rem;
+  background-color: var(--WARM-WHITE-TRANS);
+}
+
 /* CONTACT */
 
 .contact {
@@ -359,6 +366,7 @@ input {
 
 .room {
   padding: 1rem;
+  margin-bottom: 1rem;
   border-radius: 5px;
   box-shadow: -1px 1px 4px grey;
   display: grid;
@@ -535,8 +543,9 @@ input {
   }
 
   .main__section {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+    padding: 2rem;
+    /* padding-top: 3rem;
+    padding-bottom: 3rem; */
   }
 
   .main__section__header {
@@ -551,20 +560,21 @@ input {
 
   .main__section--pic-left {
     display: grid;
+    grid-template-columns: 3fr 2fr;
 
     grid-template-areas:
-      "pic pic hea"
-      "pic pic tex"
-      "pic pic .";
+      "pic hea"
+      "pic tex"
+      "pic .";
   }
 
   .main__section--pic-right {
     display: grid;
 
     grid-template-areas:
-      "hea pic pic"
-      "tex pic pic"
-      ". pic pic";
+      "hea pic"
+      "tex pic"
+      ". pic";
   }
 
   /* CONTACT */
