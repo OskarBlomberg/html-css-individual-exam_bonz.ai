@@ -56,9 +56,10 @@ img {
   line-height: 1.4;
   min-height: 100vh;
   width: 100%;
-  display: grid;
-  /* TODO: ställ in detta när footer-innehållet är klart */
-  grid-template-rows: 60px 1fr auto;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
 }
 
 a:hover {
@@ -125,6 +126,7 @@ input {
   top: 0;
   z-index: 1;
   height: 60px;
+  width: 100%;
   background: white;
   outline: 5px solid var(--LIGHT-GREEN);
   display: flex;
@@ -225,7 +227,7 @@ input {
 }
 
 .main__section--pic-left {
-  background: fixed repeat-y url(images/speckeled_576x576.jpg);
+  background: local repeat-y url(images/speckeled_576x576.jpg);
 }
 
 .main__section--pic-left :is(.main__section__header, .main__section__text) {
@@ -275,6 +277,9 @@ input {
 /* CONTACT */
 
 .contact {
+  /* min-height: calc(100vh - 10rem - 108px); */
+  width: 100%;
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -643,6 +648,17 @@ input {
 
 @media only screen and (min-device-width: 577px) {
   .main__section--pic-left {
-    background: fixed repeat url(images/speckeled_1920x1080.jpg);
+    background: local repeat url(images/speckeled_1920x1080.jpg);
+  }
+}
+
+@media only screen and (min-device-width: 1921px) {
+  .body {
+    background: local url(images/japanska-hexagoner_beige-white.svg);
+  }
+
+  .main {
+    max-width: 1920px;
+    background-color: white;
   }
 }
