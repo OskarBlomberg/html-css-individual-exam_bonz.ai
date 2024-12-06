@@ -311,7 +311,8 @@ input {
 
 /* BOOKING */
 
-.booking__section {
+.booking__section,
+.booking__aside {
   margin: 1.5rem 5% 1rem;
 }
 
@@ -360,14 +361,6 @@ input {
 }
 
 /* ROOMS */
-
-.rooms {
-  margin: 1rem 5%;
-}
-
-.rooms__heading {
-  margin: 0.5rem;
-}
 
 .room {
   padding: 1rem;
