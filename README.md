@@ -1,6 +1,8 @@
-# Individuell examen i html och css
+# Individuell examen i html och css för Folkuniversitetet Göteborgs YH i Frontend-utveckling
 
 Kraven var följande:
+
+"Välkommen till Bonz.ai, det framtida hotellet där hållbarhet möter smart teknologi för att skapa den ultimata hotellvistelsen! Här kombineras AI-drivna upplevelser med en grön livsstil, och nu är det er tur att ge det liv online. Uppdraget? Skapa en webbplats som speglar Bonz.ai:s unika koncept och övertygar gäster om att detta är det mest innovativa och miljövänliga boendet de kan välja. 
 
 ## Funktionella krav
 
@@ -34,4 +36,4 @@ All text får vara lorem ipsum.
 
 * Allt i godkänt
 * Använda dig av BEM som namnstandard konsekvent över alla sidor, d.v.s. det är inte tillåtet att enbart ha det på några få element för att nå Väl Godkänt.
-* Lämna in välskriven HTML och CSS.
+* Lämna in välskriven HTML och CSS."
