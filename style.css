@@ -113,7 +113,6 @@ input {
   --DARK-BLUE: #14264d;
   --LIGHT-GREEN: #bcd39c;
   --LIGTH-BLUE: #0c8ce9;
-  --LOGO-TURQUOISE: #55eabe;
   --WARM-WHITE: #fffff8;
   --WARM-WHITE-TRANS: #fffff8b7;
 }
@@ -227,7 +226,7 @@ input {
 }
 
 .main__section--pic-left {
-  background: local repeat-y url(images/speckeled_576x576.jpg);
+  background: repeat-y url(images/speckeled_576x576.webp);
 }
 
 .main__section--pic-left :is(.main__section__header, .main__section__text) {
@@ -258,7 +257,7 @@ input {
   position: absolute;
   top: 12%;
   left: 5%;
-  margin-right: 10%;
+  margin-right: 15%;
   font-size: clamp(1.5rem, 2.4vw, 2rem);
   line-height: 1.6;
 }
@@ -511,11 +510,11 @@ input {
   }
 
   80% {
-    transform: scale(105%, 120%);
+    transform: scale(1.05, 1.2);
   }
 
   100% {
-    transform: scale(100%);
+    transform: scale(1);
   }
 }
 
@@ -551,6 +550,8 @@ input {
   .main__section--pic-left {
     display: grid;
     grid-template-columns: 3fr 2fr;
+    row-gap: 1rem;
+    column-gap: 1rem;
 
     grid-template-areas:
       "pic hea"
@@ -560,15 +561,12 @@ input {
 
   .main__section--pic-right {
     display: grid;
+    row-gap: 1rem;
 
     grid-template-areas:
       "hea pic"
       "tex pic"
       ". pic";
-  }
-
-  .main__section--pic-left :is(.main__section__header, .main__section__text) {
-    margin-left: 0;
   }
 
   /* BOOKING */
@@ -645,16 +643,16 @@ input {
   }
 }
 
-@media only screen and (min-device-width: 577px) {
+@media only screen and (min-width: 577px) {
   .main__section--pic-left {
-    background: local repeat url(images/speckeled_1920x1080.jpg);
+    background: url(images/speckeled-pattern_1920x1080.webp) repeat;
   }
 }
 
-@media only screen and (min-device-width: 1921px) and (min-resolution: 2dppx),
-  only screen and (min-device-width: 1921px) and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen and (min-width: 1921px) and (min-resolution: 2dppx),
+  only screen and (min-width: 1921px) and (-webkit-min-device-pixel-ratio: 2) {
   .body {
-    background: local url(images/japanska-hexagoner_beige-white.svg);
+    background: url(images/japanska-hexagoner_beige-white.svg);
   }
 
   .main {

@@ -25,7 +25,7 @@
           <!-- Höjd och bredd anges i html enligt best practice för bilder (mdn, w3schools) för att undvika cumulative layout shift -->
           <img
             class="img--mh"
-            src="images/logo/bonz.ai-logo-black-landscape-1162x280.png"
+            src="images/logo/bonz.ai-logo-black-landscape-1162x280.avif"
             alt="bonz.ai logo"
             width="1164"
             height="280"
@@ -34,6 +34,7 @@
       </figure>
       <div class="lr-container">
         <!-- Button-element får inte innehålla nav, därav div -->
+        <!-- Språk-knappen inte funktionell, men den borde verkligen finnas -->
         <div class="header__button header__button--lang" tabindex="0">
           Språk
           <nav class="header__nav header__nav__lang">
@@ -87,10 +88,16 @@
       <figure class="hero">
         <img
           class="hero__img"
-          src="images/photos-2880x1620/09-day.jpg"
+          srcset="
+            images/09-day_576x324.avif    576w,
+            images/09-day_1920x1080.avif 1920w,
+            images/09-day_2880x1620.avif 2880w
+          "
+          src="images/09-day_1920x1080.avif"
+          sizes="(max-width: 576px) 576px, 1920px"
           alt="Bergsvy med sjö i förgrunden"
-          width="2880"
-          height="1620"
+          width="1920"
+          height="1080"
         />
         <figcaption class="hero__caption--on-picture">
           Hotellet där klimatsmart <span class="nowrap">möter tekniksmart</span>
@@ -103,10 +110,16 @@
         <figure class="main__picture-container">
           <img
             class="img--mw main__picture-container__img"
-            src="images/photos-2880x1620/03-day.jpg"
+            srcset="
+              images/03-day_576x324.webp    576w,
+              images/03-day_1920x1080.webp 1920w,
+              images/03-day_2880x1620.avif 2880w
+            "
+            src="images/03-day_1920x1080.webp"
+            sizes="(max-width: 576px) 576px, 1920px"
             alt="utsikt från rummet"
-            width="2280"
-            height="1620"
+            width="1920"
+            height="1080"
           />
         </figure>
         <p class="main__section__text">
@@ -123,11 +136,12 @@
           <img
             class="img--mw main__picture-container__img"
             srcset="
-              images/saiho-ji_bridge_576x432.png    576w,
-              images/saiho-ji_bridge_1920x1440.png 1920w
+              images/saihoji-bridge_576x432.avif    576w,
+              images/saihoji-bridge_1920x1440.avif 1920w,
+              images/saihoji-bridge_3840x2880.avif 3840w
             "
-            src="images/saiho-ji_bridge_1920x1440.png"
-            sizes="(max-width: 576px) 576px, 1920w"
+            src="images/saihoji-bridge_1920x1440.avif"
+            sizes="(max-width: 576px) 576px, 1920px"
             alt="Skogsstig över dammar"
             width="1920"
             height="1440"
@@ -135,8 +149,12 @@
           />
         </figure>
         <p class="main__section__text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-          minima laudantium natus!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt et
+          dolorem debitis ab, sed sunt veritatis distinctio excepturi quam ad
+          ratione adipisci omnis facilis reprehenderit. Optio veniam molestias
+          aspernatur, voluptate aut nisi voluptates quis totam voluptatum
+          debitis consectetur quisquam a nobis porro et non deserunt aperiam
+          ipsa sequi iure fugiat.
         </p>
       </section>
     </main>
