@@ -233,6 +233,11 @@ input {
   padding: 0 0.2rem 0.2rem;
 }
 
+.main__picture-container {
+  margin: 0 auto;
+  max-width: 1000px;
+}
+
 /* LANDING */
 
 .hero {
@@ -263,7 +268,7 @@ input {
 /* ABOUT */
 
 .caption-header-about {
-  padding: 0.2rem 0.5rem;
+  padding: 0rem 1rem;
   background-color: var(--WARM-WHITE-TRANS);
 }
 
@@ -346,6 +351,14 @@ input {
   gap: 0.8rem;
 }
 
+.general_amenities {
+  margin: 0.5rem 0 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-columns: auto;
+  list-style-position: inside;
+}
+
 /* ROOMS */
 
 .rooms {
@@ -356,57 +369,39 @@ input {
   margin: 0.5rem;
 }
 
-.general_amenities {
-  margin: 0.5rem 0 1rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-auto-columns: auto;
-  list-style-position: inside;
-}
-
 .room {
   padding: 1rem;
   margin-bottom: 1rem;
   border-radius: 5px;
   box-shadow: -1px 1px 4px grey;
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  grid-template-rows: repeat(auto);
-  grid-template-areas:
-    "pic pic"
-    "inf inf"
-    "btn btn"
-    "usp usp"
-    "esp esp";
-  gap: 1rem 0.4rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
 }
 
-.room__figure {
-  grid-area: pic;
+.room__info {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
 }
 
-.room__text {
-  grid-area: inf;
+.room__info__text__header {
+  text-wrap: balance;
 }
 
-.room__amenities {
-  grid-area: usp;
+.room__info__amenities {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: auto;
   list-style-position: inside;
 }
 
-.room__amenities--more {
-  grid-area: esp;
+.room__info__amenities--more {
   list-style-position: inside;
 }
 
-.room__booking-button {
-  grid-area: btn;
-}
-
-.room__amenities__header {
+.room__info__amenities__header {
+  margin-top: 0.5rem;
   list-style-type: none;
   font-weight: bold;
 }
@@ -544,8 +539,6 @@ input {
 
   .main__section {
     padding: 2rem;
-    /* padding-top: 3rem;
-    padding-bottom: 3rem; */
   }
 
   .main__section__header {
@@ -575,6 +568,26 @@ input {
       "hea pic"
       "tex pic"
       ". pic";
+  }
+
+  .main__section--pic-left :is(.main__section__header, .main__section__text) {
+    margin-left: 0;
+  }
+
+  /* BOOKING */
+
+  .room {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+
+  .room__figure {
+    grid-column: 1 / 2;
+  }
+
+  .room__info {
+    grid-column: 2 / 3;
   }
 
   /* CONTACT */
