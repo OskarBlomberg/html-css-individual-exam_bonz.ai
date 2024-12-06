@@ -277,7 +277,6 @@ input {
 /* CONTACT */
 
 .contact {
-  /* min-height: calc(100vh - 10rem - 108px); */
   width: 100%;
   flex-grow: 1;
   display: flex;

@@ -122,7 +122,12 @@
         <figure class="main__picture-container">
           <img
             class="img--mw main__picture-container__img"
-            src="images/saiho-ji_2_1920x1440.jpg"
+            srcset="
+              images/saiho-ji_bridge_576x432.png    576w,
+              images/saiho-ji_bridge_1920x1440.png 1920w
+            "
+            src="images/saiho-ji_bridge_1920x1440.png"
+            sizes="(max-width: 576px) 576px, 1920w"
             alt="Skogsstig över dammar"
             width="1920"
             height="1440"
