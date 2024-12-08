@@ -16,20 +16,6 @@
   left: -10000px;
 }
 
-.checkbox {
-  /* Höjd och bredd inte 48px då även texten är klickbar tack vare label */
-  display: block;
-  height: 32px;
-  width: 32px;
-  margin-bottom: 0.5em;
-}
-
-.lr-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
 /* GENERAL */
 
 html {
@@ -137,6 +123,12 @@ input {
   height: 100%;
 }
 
+.header__lr-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .header__button {
   width: 48px;
   height: 48px;
@@ -149,7 +141,7 @@ input {
   font-size: 1rem;
 }
 
-.header__nav {
+.nav {
   width: 15rem;
   background-color: white;
   display: none;
@@ -159,39 +151,39 @@ input {
   animation: showMenu 0.35s ease-out forwards;
 }
 
-:is(.header__button:hover, .header__button:focus-within) .header__nav {
+:is(.header__button:hover, .header__button:focus-within) .nav {
   display: block;
 }
 
-.header__nav__lang {
+.nav--lang {
   right: 56px;
 }
 
-.header__nav__menu {
+.nav__menu {
   right: 0;
 }
 
-.header__nav__list {
+.nav__list {
   list-style: none;
   display: flex;
   flex-flow: column nowrap;
 }
 
-.header__nav__list__item {
+.nav__item {
   border: 1px solid var(--LIGHT-GREEN);
   border-top: unset;
   width: 100%;
 }
 
-.header__nav__list__item:first-of-type {
+.nav__item:first-of-type {
   border-radius: 5px 0 0 0;
 }
 
-.header__nav__list__item:last-of-type {
+.nav__item:last-of-type {
   border-radius: 0 0 5px 5px;
 }
 
-.header__nav__list__item__link {
+.nav__link {
   color: var(--DARK-GREEN);
   font-size: 1.5rem;
   text-decoration: none;
@@ -203,8 +195,7 @@ input {
   height: 100%;
 }
 
-:is(.header__nav__list__item:hover, .header__nav__list__item:focus-within)
-  .header__nav__list__item__link {
+:is(.nav__item:hover, .nav__item:focus-within) .nav__link {
   width: 100%;
   font-size: 1.7rem;
   font-weight: bold;
@@ -234,8 +225,9 @@ input {
   padding: 0 0.2rem 0.2rem;
 }
 
-.main__picture-container {
+.main__section__picture-container {
   margin: 0 auto;
+  width: 100%;
   max-width: 1000px;
 }
 
@@ -253,17 +245,13 @@ input {
   object-position: 55% 75%;
 }
 
-.hero__caption--on-picture {
+.hero__caption {
   position: absolute;
   top: 12%;
   left: 5%;
   margin-right: 15%;
   font-size: clamp(1.5rem, 2.4vw, 2rem);
   line-height: 1.6;
-}
-
-.main__picture-container {
-  width: 100%;
 }
 
 /* ABOUT */
@@ -284,28 +272,28 @@ input {
   align-items: center;
 }
 
-.contact__form {
+.contact-form {
   padding: 1rem 5%;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0.1rem;
 }
 
-.contact__form__label {
+.contact-form__label {
   display: block;
   margin: 0.4rem 0 0;
   grid-column: 1 / 2;
   grid-row: span 1;
 }
 
-.contact__form__input {
+.contact-form__input {
   width: 100%;
   padding: 0 0.3rem;
   line-height: 1.6rem;
   grid-column: span 2;
 }
 
-.contact__form__buttons {
+.contact-form__buttons {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
@@ -320,6 +308,7 @@ input {
 }
 
 .booking-form {
+  max-width: fit-content;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-rows: auto;
@@ -332,27 +321,27 @@ input {
   gap: 0.5rem;
 }
 
-.booking-form__container--beds {
-  display: unset;
-}
-
-.booking-form__container__input {
+.booking-form__input {
   max-width: 335px;
 }
 
-.booking-form__container__input--beds {
-  margin-left: 0.5rem;
-}
-
-.booking-form__container--beds__clarification {
+.booking-form__clarification {
   margin-top: 1rem;
 }
 
-.booking__container--include-booked {
+.booking-form__container--include-booked {
   grid-column: span 2;
   display: flex;
   align-items: center;
   gap: 0.8rem;
+}
+
+.booking-form__checkbox {
+  /* Höjd och bredd inte 48px då även texten är klickbar tack vare label */
+  display: block;
+  height: 32px;
+  width: 32px;
+  margin-bottom: 0.5em;
 }
 
 .general_amenities {
@@ -381,22 +370,22 @@ input {
   gap: 1rem;
 }
 
-.room__info__text__header {
+.room__text__header {
   text-wrap: balance;
 }
 
-.room__info__amenities {
+.room__amenities {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-auto-columns: auto;
   list-style-position: inside;
 }
 
-.room__info__amenities--more {
+.room__amenities--more {
   list-style-position: inside;
 }
 
-.room__info__amenities__header {
+.room__amenities__header {
   margin-top: 0.5rem;
   list-style-type: none;
   font-weight: bold;
@@ -478,7 +467,7 @@ input {
 @media screen and (min-width: 577px) {
   /* LANDING AND ABOUT */
 
-  .main__picture-container {
+  .main__section__picture-container {
     grid-area: pic;
   }
 
@@ -520,6 +509,17 @@ input {
 
   /* BOOKING */
 
+  .booking-form__container {
+    grid-column: span 2;
+  }
+
+  .booking-form__container--in {
+    grid-column: 1 / 2;
+  }
+  .booking-form__container--out {
+    grid-column: 2 / 3;
+  }
+
   .room {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -535,7 +535,7 @@ input {
   }
 
   /* CONTACT */
-  .contact__form {
+  .contact-form {
     width: 90%;
     max-width: 1000px;
     gap: 0.5rem 1rem;
@@ -551,43 +551,43 @@ input {
       "btns btns btns btns";
   }
 
-  .contact__form__header {
+  .contact-form__header {
     grid-area: header;
   }
 
-  .contact__form__input--name {
+  .contact-form__input--name {
     grid-area: namein;
   }
 
-  .contact__form__input--email {
+  .contact-form__input--email {
     grid-area: mailin;
   }
 
-  .contact__form__input--tel {
+  .contact-form__input--tel {
     grid-area: telein;
   }
 
-  .contact__form__input--message {
+  .contact-form__input--message {
     grid-area: messin;
   }
 
-  .contact__form__label--name {
+  .contact-form__label--name {
     grid-area: namela;
   }
 
-  .contact__form__label--email {
+  .contact-form__label--email {
     grid-area: mailla;
   }
 
-  .contact__form__label--tel {
+  .contact-form__label--tel {
     grid-area: telela;
   }
 
-  .contact__form__label--message {
+  .contact-form__label--message {
     grid-area: messla;
   }
 
-  .contact__form__buttons {
+  .contact-form__buttons {
     grid-area: btns;
   }
 }

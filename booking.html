@@ -24,7 +24,7 @@
       <figure class="figure header__logo">
         <a href="/">
           <img
-            class="img--mh"
+            class="img img--mh"
             src="images/logo/bonz.ai-logo-black-landscape-1162x280.avif"
             alt="bonz.ai logo"
             width="1164"
@@ -32,19 +32,19 @@
           />
         </a>
       </figure>
-      <div class="lr-container">
+      <div class="header__lr-container">
         <div class="header__button header__button--lang" tabindex="0">
           Språk
-          <nav class="header__nav header__nav__lang">
-            <ul class="header__nav__list">
-              <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">Svenska</a>
+          <nav class="nav nav--lang">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">Svenska</a>
               </li>
-              <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">English</a>
+              <li class="nav__item">
+                <a class="nav__link" href="#">English</a>
               </li>
-              <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">Deutsch</a>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Deutsch</a>
               </li>
             </ul>
           </nav>
@@ -57,20 +57,16 @@
             width="32"
             height="32"
           />
-          <nav class="header__nav header__nav__menu">
-            <ul class="header__nav__list">
-              <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="/">Startsida</a>
+          <nav class="nav nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="/">Startsida</a>
               </li>
-              <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="about.html"
-                  >Om oss</a
-                >
+              <li class="nav__item">
+                <a class="nav__link" href="about.html">Om oss</a>
               </li>
-              <li class="header__nav__list__item">
-                <a
-                  class="header__nav__list__item__link"
-                  href="contact-form.html"
+              <li class="nav__item">
+                <a class="nav__link" href="contact-form.html"
                   >Kontaktformulär</a
                 >
               </li>
@@ -87,7 +83,7 @@
           <div class="booking-form__container booking-form__container--in">
             <label for="check-in">Check-in:</label>
             <input
-              class="booking-form__container__input"
+              class="booking-form__input"
               type="date"
               id="check-in"
               name="check-in"
@@ -100,7 +96,7 @@
           <div class="booking-form__container booking-form__container--out">
             <label for="check-out">Check-out:</label>
             <input
-              class="booking-form__container__input"
+              class="booking-form__input"
               type="date"
               id="check-out"
               name="check-out"
@@ -110,10 +106,10 @@
             />
           </div>
 
-          <div class="booking__container booking.form__container--beds">
+          <div class="booking-form__container booking.form__container--beds">
             <label for="beds">Antal besökare*: </label>
             <input
-              class="booking-form__container__input--beds"
+              class="booking-form__input booking-form__input--beds"
               type="number"
               min="1"
               max="4"
@@ -122,12 +118,12 @@
               name="beds"
               required
               aria-required="true"
-              aria-describedby="booking-form__container--beds__clarification"
+              aria-describedby="booking-form__clarification"
               value="2"
             />
             <p
-              class="booking-form__container--beds__clarification"
-              id="booking-form__container--beds__clarification"
+              class="booking-form__clarification"
+              id="booking-form__clarification"
             >
               *Inklusive barn. Spädbarn utan behov av separat säng behöver inte
               räknas in i detta steg.
@@ -135,17 +131,17 @@
           </div>
 
           <div
-            class="booking-form__container booking__container--include-booked"
+            class="booking-form__container booking-form__container--include-booked"
           >
             <label for="show-all">Visa även bokade:</label>
             <input
-              class="checkbox"
+              class="booking-form__checkbox"
               type="checkbox"
               id="show-all"
               name="show-all"
             />
           </div>
-          <button type="submit" class="button booking__button">Sök</button>
+          <button type="submit" class="button">Sök</button>
         </form>
       </section>
 
@@ -167,7 +163,7 @@
         <article class="room">
           <figure class="room__figure">
             <img
-              class="img--mw"
+              class="img img--mw"
               srcset="
                 images/japanese-room_credit_s-tsuchiya-unsplash_640x427.webp    640w,
                 images/japanese-room_credit_s-tsuchiya-unsplash_1920x1280.webp 1920w,
@@ -181,10 +177,10 @@
             />
           </figure>
 
-          <!-- Fortfarande samma artikel som bilden också är inkluderad i. Divar används här för styling eftersom semantiken ska hållas intakt -->
+          <!-- Fortfarande samma artikel som bilden också är inkluderad i. Divar används här för styling eftersom semantiken ska hållas intakt, annars klagar w3:s validator över att article saknar h-element -->
           <div class="room__info">
-            <div class="room__info__text">
-              <h3 class="room__info__text__header">
+            <div class="room__text">
+              <h3 class="room__text__header">
                 Nara - Traditionellt japanskt rum
               </h3>
               <p>
@@ -194,11 +190,9 @@
               </p>
             </div>
 
-            <button class="button room__info__booking-button">
-              Boka från 1234:-
-            </button>
+            <button class="button">Boka från 1234:-</button>
 
-            <ul class="room__info__amenities">
+            <ul class="room__amenities">
               <li>USP</li>
               <li>USP</li>
               <li>USP</li>
@@ -206,11 +200,11 @@
             </ul>
             <details>
               <summary>Visa fler</summary>
-              <ul class="room__info__amenities--more">
-                <li class="room__info__amenities__header">För din komfort:</li>
+              <ul class="room__amenities--more">
+                <li class="room__amenities__header">För din komfort:</li>
                 <li>USP1</li>
                 <li>USP2</li>
-                <li class="room__info__amenities__header">För din trygghet:</li>
+                <li class="room__amenities__header">För din trygghet:</li>
                 <li>USP3</li>
                 <li>USP4</li>
                 <li>USP5</li>
@@ -222,7 +216,7 @@
         <article class="room">
           <figure class="room__figure">
             <img
-              class="img--mw"
+              class="img img--mw"
               srcset="
                 images/03-day_576x324.webp    576w,
                 images/03-day_1920x1080.webp 1920w,
@@ -237,8 +231,8 @@
           </figure>
 
           <div class="room__info">
-            <div class="room__info__text">
-              <h3 class="room__info__text__header">
+            <div class="room__text">
+              <h3 class="room__text__header">
                 Ytspegling - Rum med sjöutsikt och egen brygga
               </h3>
               <p>
@@ -248,11 +242,9 @@
               </p>
             </div>
 
-            <button class="button room__info__booking-button">
-              Boka från 1234:-
-            </button>
+            <button class="button">Boka från 1234:-</button>
 
-            <ul class="room__info__amenities">
+            <ul class="room__amenities">
               <li>USP</li>
               <li>USP</li>
               <li>USP</li>
@@ -260,11 +252,11 @@
             </ul>
             <details>
               <summary>Visa fler</summary>
-              <ul class="room__info__amenities--more">
-                <li class="room__info__amenities__header">För din komfort:</li>
+              <ul class="room__amenities--more">
+                <li class="room__amenities__header">För din komfort:</li>
                 <li>USP1</li>
                 <li>USP2</li>
-                <li class="room__info__amenities__header">För din trygghet:</li>
+                <li class="room__amenities__header">För din trygghet:</li>
                 <li>USP3</li>
                 <li>USP4</li>
                 <li>USP5</li>
@@ -276,7 +268,7 @@
         <article class="room">
           <figure class="room__figure">
             <img
-              class="img--mw"
+              class="img img--mw"
               srcset="
                 images/japanese-room_credit-filiz-elaerts-unsplash_640x428.webp    640w,
                 images/japanese-room_credit-filiz-elaerts-unsplash_1920x1285.webp 1920w,
@@ -291,8 +283,8 @@
           </figure>
 
           <div class="room__info">
-            <div class="room__info__text">
-              <h3 class="room__info__text__header">
+            <div class="room__text">
+              <h3 class="room__text__header">
                 Sapporo - Traditionellt japanskt rum
               </h3>
               <p>
@@ -302,11 +294,9 @@
               </p>
             </div>
 
-            <button class="button room__info__booking-button">
-              Boka från 1234:-
-            </button>
+            <button class="button">Boka från 1234:-</button>
 
-            <ul class="room__info__amenities">
+            <ul class="room__amenities">
               <li>USP</li>
               <li>USP</li>
               <li>USP</li>
@@ -314,11 +304,11 @@
             </ul>
             <details>
               <summary>Visa fler</summary>
-              <ul class="room__info__amenities--more">
-                <li class="room__info__amenities__header">För din komfort:</li>
+              <ul class="room__amenities--more">
+                <li class="room__amenities__header">För din komfort:</li>
                 <li>USP1</li>
                 <li>USP2</li>
-                <li class="room__info__amenities__header">För din trygghet:</li>
+                <li class="room__amenities__header">För din trygghet:</li>
                 <li>USP3</li>
                 <li>USP4</li>
                 <li>USP5</li>
