@@ -24,7 +24,7 @@
         <a href="/">
           <!-- Höjd och bredd anges i html enligt best practice för bilder (mdn, w3schools) för att undvika cumulative layout shift -->
           <img
-            class="img--mh"
+            class="img img--mh"
             src="images/logo/bonz.ai-logo-black-landscape-1162x280.avif"
             alt="bonz.ai logo"
             width="1164"
@@ -32,21 +32,21 @@
           />
         </a>
       </figure>
-      <div class="lr-container">
+      <div class="header__lr-container">
         <!-- Button-element får inte innehålla nav, därav div -->
         <!-- Språk-knappen inte funktionell, men den borde verkligen finnas -->
         <div class="header__button header__button--lang" tabindex="0">
           Språk
-          <nav class="header__nav header__nav__lang">
-            <ul class="header__nav__list">
-              <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">Svenska</a>
+          <nav class="nav nav--lang">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="#">Svenska</a>
               </li>
-              <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">English</a>
+              <li class="nav__item">
+                <a class="nav__link" href="#">English</a>
               </li>
-              <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="#">Deutsch</a>
+              <li class="nav__item">
+                <a class="nav__link" href="#">Deutsch</a>
               </li>
             </ul>
           </nav>
@@ -59,22 +59,16 @@
             width="32"
             height="32"
           />
-          <nav class="header__nav header__nav__menu">
-            <ul class="header__nav__list">
-              <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="booking.html"
-                  >Boka rum</a
-                >
+          <nav class="nav nav__menu">
+            <ul class="nav__list">
+              <li class="nav__item">
+                <a class="nav__link" href="booking.html">Boka rum</a>
               </li>
-              <li class="header__nav__list__item">
-                <a class="header__nav__list__item__link" href="about.html"
-                  >Om oss</a
-                >
+              <li class="nav__item">
+                <a class="nav__link" href="about.html">Om oss</a>
               </li>
-              <li class="header__nav__list__item">
-                <a
-                  class="header__nav__list__item__link"
-                  href="contact-form.html"
+              <li class="nav__item">
+                <a class="nav__link" href="contact-form.html"
                   >Kontaktformulär</a
                 >
               </li>
@@ -99,7 +93,7 @@
           width="1920"
           height="1080"
         />
-        <figcaption class="hero__caption--on-picture">
+        <figcaption class="hero__caption">
           Hotellet där klimatsmart <span class="nowrap">möter tekniksmart</span>
           <span class="nowrap">- så att du kan slappna av</span>
         </figcaption>
@@ -107,9 +101,9 @@
 
       <section class="main__section main__section--pic-left">
         <h1 class="main__section__header">Framtidens hotell</h1>
-        <figure class="main__picture-container">
+        <figure class="main__section__picture-container">
           <img
-            class="img--mw main__picture-container__img"
+            class="img img--mw"
             srcset="
               images/03-day_576x324.webp    576w,
               images/03-day_1920x1080.webp 1920w,
@@ -132,9 +126,9 @@
 
       <section class="main__section main__section--pic-right">
         <h2 class="main__section__header">Kom nära naturen</h2>
-        <figure class="main__picture-container">
+        <figure class="main__section__picture-container">
           <img
-            class="img--mw main__picture-container__img"
+            class="img img--mw"
             srcset="
               images/saihoji-bridge_576x432.avif    576w,
               images/saihoji-bridge_1920x1440.avif 1920w,

@@ -1,4 +1,4 @@
-const menuLinks = document.querySelectorAll(".header__nav__list__item__link");
+const menuLinks = document.querySelectorAll(".nav__link");
 
 menuLinks.forEach((link) => {
   link.addEventListener("click", (event) => {
