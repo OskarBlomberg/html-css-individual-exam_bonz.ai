@@ -220,7 +220,8 @@ input {
   background: repeat-y url(images/speckeled_576x576.webp);
 }
 
-.main__section--pic-left :is(.main__section__header, .main__section__text) {
+.main__section__header--text-background,
+.main__section__text--text-background {
   background-color: var(--WARM-WHITE-TRANS);
   padding: 0 0.2rem 0.2rem;
 }
@@ -344,7 +345,7 @@ input {
   margin-bottom: 0.5em;
 }
 
-.general_amenities {
+.general-amenities {
   margin: 0.5rem 0 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
